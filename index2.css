@@ -1,0 +1,28 @@
+/* bootstrapより優先させるcss */
+.navbar-light .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+}
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(49, 49, 49, 0.7);
+}
+
+
+a {
+    color:black;
+  }
+  
+  a:hover{
+    color:black;
+    text-decoration: none;
+  }
+
+  ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  ul li{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }

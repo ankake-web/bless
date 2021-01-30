@@ -1,0 +1,610 @@
+body{
+  position: relative;
+}
+
+#wrap {
+  overflow: hidden;
+}
+
+.top-img{
+  width: 50%;
+  padding-bottom: 5%;
+}
+
+.btn-square {
+  display: inline-block;
+  width: 120px;
+  
+  padding: 0.5em 1em;
+  text-align: center;
+  text-decoration: none;
+  background: #4d6396;/*ボタン色*/
+  color: #FFF;
+  border-bottom: solid 4px rgb(98, 114, 149);
+  border-radius: 3px;
+  transition: all 0.3s ease 0s;
+}
+.btn-square:hover {
+  /*ボタンを押したとき*/
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  -webkit-transform:0.3s translateY(4px);
+  transform: translateY(4px);/*下に動く*/
+  /* border-bottom: none;線を消す */
+}
+
+/* 文字反転 */
+.reverse{
+  transform:scale(-1,1);
+}
+
+/* 非表示 */
+.navber{
+  line-height: 15px;
+  position: absolute;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+}
+
+.dropdown:hover>.dropdown-menu {
+  display: block;}
+
+.nav-border li{
+  border-right: 1px solid rgba(167, 165, 165,0.7);
+  line-height: 5px;
+  margin: 10px 0;
+  
+    }
+
+.nav-border li:first-child{
+  border-left: 1px solid rgba(167, 165, 165,0.7);
+  }
+
+
+  video{
+    width: 100%;
+    height: 50%;
+
+  }
+
+  .example {/*親div*/
+    position: relative;/*相対配置*/
+    }
+  
+  .example-p {
+    position: absolute;/*絶対配置*/
+    color: white;/*文字は白に*/
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    }
+
+    .text-stroke{
+      text-shadow:1px 1px #2b2b2b;
+  }
+
+  .bg{
+    background-color: rgb(201, 196, 196);
+  }
+
+  .border_radius {
+    border-radius: 100px;
+    width: 180px;
+}
+
+.line-height{
+  line-height: 30px;
+}
+
+
+/* zoom hover 文字拡大（ボツ） */
+/* .zoom { 
+  display: inline-block;
+  transition: .3s;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.zoom:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: ;
+}*/
+
+
+
+/* zoom hover 文字強調 */
+.zoom { 
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+  margin-top: 5%;
+  font-weight: bold;
+
+}
+.zoom::before,
+.zoom::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 1px;
+  background-color: #0e2016;
+  transition: .3s;
+}
+.zoom::before {
+  top: 0;
+  left: 0;
+}
+.zoom::after {
+  bottom: 0;
+  right: 0;
+}
+
+.hover-text:hover .zoom::before,
+.hover-text:hover .zoom::after {
+  width: 100%;
+}
+
+/* button 予約 */
+.button {
+  display: inline-block;
+  width: 200px;
+  height: 54px;
+  text-align: center;
+  text-decoration: none;
+  line-height: 54px;
+  outline: none;
+}
+.button::before,
+.button::after {
+  position: absolute;
+  z-index: -1;
+  display: block;
+  content: '';
+}
+.button,
+.button::before,
+.button::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.button {
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  border: 2px solid  #485a85;
+  color: #333;
+  line-height: 50px;
+  overflow: hidden;
+}
+.button:hover {
+  color: #fff;
+}
+.button::after {
+  top: -100%;
+  width: 100%;
+  height: 100%;
+}
+.button:hover::after {
+  top: 0;
+  background-color: #333;
+}
+
+
+/* insta用ボタン */
+.btn-social-long-insta {
+  /*ボタンの下地*/
+  color: #FFF;/*文字・アイコン色*/
+  border-radius: 7px;/*角丸に*/
+  position: relative;
+  display: inline-block;
+  height: 50px;/*高さ*/
+  width: 190px;/*幅*/
+  text-align: center;/*中身を中央寄せ*/
+  font-size: 25px;/*文字のサイズ*/
+  line-height: 50px;/*高さと合わせる*/
+  background: linear-gradient(135deg, #427eff 0%, #f13f79 70%) no-repeat;/*グラデーション①*/
+  overflow: hidden;/*はみ出た部分を隠す*/
+  text-decoration:none;/*下線は消す*/
+}
+
+.btn-social-long-insta:before {
+  /*グラデーション②*/
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;/*全体を覆う*/
+  height: 100%;/*全体を覆う*/
+  background: linear-gradient(15deg, #ffdb2c, rgb(249, 118, 76) 25%, rgba(255, 77, 64, 0) 50%) no-repeat;
+}
+
+.btn-social-long-insta .fa-instagram {
+  /*アイコン*/
+  font-size: 35px;/*アイコンサイズ*/
+  position: relative;
+  top: 4px;/*アイコン位置の微調整*/
+}
+
+.btn-social-long-insta span {
+  /*テキスト*/
+  display:inline-block;
+  position: relative;
+  transition: .5s}
+
+.btn-social-long-insta:hover span {
+  /*ホバーで一周回転*/
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+
+
+
+/* ライン用ボタン */
+.btn-social-long-line {
+  color: #FFF;/*文字・アイコン色*/
+  border-radius: 7px;/*角丸に*/
+  display: inline-block;
+  height: 50px;/*高さ*/
+  width: 190px;/*幅*/
+  text-align: center;/*中身を中央寄せ*/
+  font-size: 25px;/*文字のサイズ*/
+  line-height: 50px;/*高さと合わせる*/
+  background: rgb(37,172,0);
+  overflow: hidden;/*はみ出た部分を隠す*/
+  text-decoration:none;/*下線は消す*/
+}
+
+.btn-social-long-line .fa-line {
+  font-size: 30px;
+}
+
+.btn-social-long-line span {
+  /*テキスト*/
+  display:inline-block;
+  transition: .5s;
+}
+
+.btn-social-long-line:hover span {
+  /*ホバーで一周回転*/
+  -webkit-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+
+
+/* 最新コラム */
+.balloon1 {
+  position: relative;
+  display: inline-block;
+  padding: 7px 10px;
+  min-width: 120px;
+  max-width: 100%;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  background: #a5a5a5;
+  width: 100%;
+}
+
+.balloon1:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border: 10px solid transparent;
+  border-top: 10px solid#a5a5a5;
+}
+
+.balloon1 p {
+  margin: 0;
+  padding: 0;
+}
+
+.columu{
+  border: 1px solid;
+  border-color: #cccdd4;
+  height: 100%;
+}
+
+/* コラム内写真 */
+.img_wrap{
+  border: 1px solid #ddd;
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  background: #000;
+}
+.img_wrap img{
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  transition-duration: 0.3s;
+}
+.img_wrap:hover img{
+  opacity: 0.9;
+  transition-duration: 0.3s;
+  outline: 1px solid rgb(231, 228, 228);
+  outline-offset: -10px;
+}
+
+.img_wrap {/*親div*/
+  position: relative;/*相対配置*/
+  }
+
+.img_wrap p {
+  position: absolute;/*絶対配置*/
+  color: white;/*文字は白に*/
+  top: 0;
+  left: 0;
+  background-color: black;
+  font-size: smaller;
+  padding: 1% 5%;
+  }
+
+  /* コラム内文章・ボタン */
+  
+
+  .btn-partial-line {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.25em 0.5em;
+    text-decoration: none;
+    border-bottom: solid 1px #000000;
+    border-left: solid 1px #000000;
+    color: #000000;
+    transition: .4s;
+    position: absolute;
+    right: 10%;
+    bottom: 10%;
+    
+  }
+  
+  .btn-partial-line:hover {
+    padding-left: 0.7em;
+    padding-right: 0.3em;
+    
+  }
+
+
+
+/* PCサイズ以上に限定 */
+@media screen and (min-width: 992px) {
+  .vio-img{
+    display: none;
+  }
+
+}
+
+/* タブレットサイズ以下に限定 */
+@media screen and (max-width: 991px) {
+  .google-map {
+      margin: 5% 10%;
+  }
+  .list {
+    display: none;
+  }
+  .list-header{
+    display: none;
+  }
+  .head-icon-list{
+    padding-bottom: 1%;
+  }
+
+  .top-img{
+    width: 30%;
+    padding-bottom: 0%;
+  }
+  .all-img{
+    display: none;
+  }
+  .hige_img{
+    width: 75%;
+    
+  }
+
+}
+
+/* タブレットサイズ以下に限定 */
+@media screen and (min-width: 991px) {
+  .icon{
+    display: none;
+  }
+
+  .tel {
+    pointer-events: none;
+    cursor: default;
+  }
+
+}
+
+
+/* スマホサイズ以下に限定 */
+@media screen and (min-width: 768px) {
+
+}
+
+.example-top{
+  font-size: 500%;
+}
+.example-bottom{
+  font-size: 150%;
+}
+
+/* スマホサイズ以下に限定 */
+@media screen and (max-width: 768px) {
+
+  .example-p {
+    position: absolute;/*絶対配置*/
+    color: white;/*文字は白に*/
+    top: 75%;
+    left: 50%;
+    -ms-transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    margin:0;
+    padding:0;
+    }
+    .example-top{
+      font-size: 300%;
+    }
+    .example-bottom{
+      font-size: 100%;
+    }
+    .top-img{
+      width: 40%;
+      padding-bottom: 0%;
+    }
+    .modai-close{
+      padding-right: 20px;
+    }
+
+
+}
+
+@media screen and (max-width: 768px){
+  .modal-menu{
+    margin-left: 0em;
+  }
+  .modai-close{
+    margin-right: 0em;
+  }
+  .index-reserve{
+    padding: 1.5rem;
+  }
+
+  .q-and-a h5{
+    font-size: small
+  }
+}
+
+
+@media screen and (max-width: 400px){
+  .modal-menu{
+    margin-right: 3em;
+  }
+  .modai-close{
+    display: none;
+  }
+
+}
+
+@media(min-width:1133px){
+  .mail-reserve-btn {
+    margin-top: 1rem;
+  }
+}
+
+@media(min-width:1194px){
+  .mail-reserve-btn {
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* モーダル開閉用ボタンのスタイル */
+.menu-btn {
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  z-index: 100;
+}
+
+.menu-btn span {
+  color: #fff;
+}
+
+.menu-btn span:after {
+  content: attr(data-txt-menu);
+}
+
+/* 開閉用ボタンがクリックされた時のスタイル */
+.open .menu-btn span:after {
+  content: attr(data-txt-close);
+}
+
+/* モーダルウィンドウのスタイル */
+.menu {
+  position: fixed;
+  display: table;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 50;
+}
+
+.menu ul {
+  display: table-cell;
+  vertical-align: middle;
+  list-style: none;
+  padding-left:10% ;
+}
+
+.menu li {
+  width: 300px;
+  height: 80px;
+  line-height: 80px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.menu li a {
+  display: block;
+  font-size: 18px;
+  color: #fff;
+}
+
+.menu li a:hover {
+  color: #999;
+}
+
+/* 開閉用ボタンがクリックされた時のスタイル */
+.open .menu {
+  cursor: url(../images/cross.svg),auto;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  visibility: visible;
+  opacity: 1;
+}
+
+
+.yugo{
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+  font-weight: bold;
+}
+
+.yugo-light{
+  font-family: '游明朝','Yu Mincho',YuMincho,'Hiragino Mincho Pro',serif;
+}
+
+.trim-image-to-circle {
+  width:  150px;       /* ※縦横を同値に */
+  height: 150px;       /* ※縦横を同値に */
+  border-radius: 50%;  /* 角丸半径を50%にする(=円形にする) */
+  background-position: left top;  /* 横長画像の左上を基準に表示 */
+  display: inline-block;          /* 複数の画像を横に並べたい場合 */
+}
+
+/* validate error message */
+.error{
+  color: red;
+}
+
+
