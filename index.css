@@ -365,10 +365,6 @@ body{
     border-left: solid 1px #000000;
     color: #000000;
     transition: .4s;
-    position: absolute;
-    right: 10%;
-    bottom: 10%;
-    
   }
   
   .btn-partial-line:hover {
@@ -607,4 +603,9 @@ body{
   color: red;
 }
 
+/* モーダル表示時に背景固定 */
+body.fixed {
+  position: fixed;
+  left: 0;
+}
 
