@@ -38,6 +38,8 @@ jQuery(function ($) {
     //開閉用ボタンをクリックでクラスの切替え
     $('.js__btn').on('click', function () {
         $body.toggleClass('open');
+        $('body').addClass('fixed').css({ top: -scrollPos });//背景固定
+        return false;//<a>を無効化
        
     });
     
@@ -45,6 +47,7 @@ jQuery(function ($) {
     //メニュー名以外の部分をクリックで閉じる
     $('#js__nav').on('click', function () {
         $body.removeClass('open');
+        $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
     });
 });
 
