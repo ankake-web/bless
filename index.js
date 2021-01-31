@@ -1,5 +1,5 @@
 jQuery(function ($) {
-    var topBtn = $('#page-top');    
+    var topBtn = $('#page-top');
     topBtn.hide();
     //スクロールが100に達したらボタン表示
     $(window).scroll(function () {
@@ -34,12 +34,12 @@ jQuery(function ($) {
 
  $(function () {
     var $body = $('body');
-    
+    var scrollPosition;    
     //開閉用ボタンをクリックでクラスの切替え
     $('.js__btn').on('click', function () {
         $body.toggleClass('open');
-        $('body').addClass('fixed').css({ top: -scrollPos });//背景固定
-        return false;//<a>を無効化
+        scrollPosition = $(window).scrollTop();//スクロール位置を取得
+		$('body').addClass('fixed').css({'top': -scrollPosition});//背景固定＆bodyのTop位置をスクロール分下に設定
        
     });
     
@@ -47,7 +47,8 @@ jQuery(function ($) {
     //メニュー名以外の部分をクリックで閉じる
     $('#js__nav').on('click', function () {
         $body.removeClass('open');
-        $('body').removeClass('fixed').css({ top: 0 });//背景固定を解除
+        $('body').removeClass('fixed').css({'top': 0});//背景固定＆Top位置を解除
+		window.scrollTo( 0 , scrollPosition );
     });
 });
 

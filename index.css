@@ -604,8 +604,8 @@ body{
 }
 
 /* モーダル表示時に背景固定 */
-body.fixed {
+ body.fixed {
   position: fixed;
   left: 0;
-}
+} 
 
